@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body {
+    user-select: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent; 
+  }
+
+.music-wrap {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ Info +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+.info {
+    width: 100%;
+    height: 100%;
+    min-height: 150%;
+    /* background-color: #2c1835; */
+    background-color: #000000;
+    /* box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38); */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+.info .author {
+    font-size: 40px;
+    color: blanchedalmond;
+    text-align: center;
+
+}
+.info ul {
+    list-style: none;
+    margin-top: 20px;
+
+}
+.info ul li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #B3B3B3;
+    margin: 0 0 15px;
+}
+.info ul li i {
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.info ul li span {
+    font-size: 18px;
+}
+.info hr {
+    border: none;
+    width: 100%;
+    height: 2px;
+    background-color: #B3B3B3;
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ Banner Music +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+.music-continer {
+    width: 100%;
+    height: auto;
+    background-color: #121212;
+}
+
+.music-banner {
+    width: 100%;
+    height: auto;
+    background-image: url(../img/uchiage\ hanabi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgb(64, 104, 136); */
+    /* background: linear-gradient(transparent 0,rgba(0,0,0,.5) 100%); */
+}
+.top-banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.top-banner ul {
+    display: flex;
+    list-style: none;
+    margin: 20px 0 0 ;
+
+}
+.top-banner ul li {
+    color: #FFFFFF;
+    margin: 0 20px 0;
+}
+.top-banner .acc {
+    width: 60px;
+    height: 60px;
+    background: url(../img/Nandemonaiya.jpg) center/cover no-repeat;
+    border-radius: 50%;
+    margin: 20px 20px 0 ;
+
+}
+
+.titel-banner {
+    font-size: 85px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 100px 0 0 50px;
+    padding-bottom: 50px;
+    
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ play list +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+.play-list {
+    width: 100%;
+    height: 100%;
+    /* background-color: #3A2444; */
+    background-color: #121212;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 20px 0 0 50px;
+    
+}
+.play-list-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.song-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 10px;
+}
+
+.song {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+.song:hover {
+    background-color: #b3b3b3;
+    border-radius: 5px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+}
+.order {
+    color: #FFFFFF;
+    margin-right: 15px;
+}
+
+/* music w---------------------------*/
+.music-waves {
+    position: relative;
+    left: -5px;
+    top: 8px;
+    margin-right: 8px;
+    display: none;
+  }
+  
+  .music-waves span {
+    position: absolute;
+    width: 4px;
+    height: 3px;
+    bottom: 0;
+    background: #000;
+    animation: waves 0.5s infinite ease;
+  }
+  
+  .music-waves span:nth-child(1) {
+    animation-delay: 0.1s;
+    background: #1DB954; 
+  }
+  
+  .music-waves span:nth-child(2) {
+    margin-left: 5px;
+    animation-delay: 0.4s;
+    background: #1DB954;
+  }
+  
+  .music-waves span:nth-child(3) {
+    margin-left: 10px;
+    animation-delay: 0.6s;
+    background: #1DB954;
+  }
+  
+  .music-waves span:nth-child(4) {
+    margin-left: 15px;
+    animation-delay: 0.8s;
+    background: #1DB954;
+  }
+  
+  @keyframes waves {
+    0% {
+      height: 5px;
+    }
+  
+    30% {
+      height: 15px;
+    }
+  
+    60% {
+      height: 20px;
+    }
+  
+    80% {
+      height: 15px;
+    }
+  
+    100% {
+      height: 5px;
+    }
+  }
+
+.song.melody .order-number {
+    display: none;
+}
+.song.melody .music-waves {
+    display: block;
+    
+}
+.song.melody .song-name {
+    color: #1DB954;
+}
+/* .song.melody {
+    background-color: #574460;
+} */
+.music-waves.melody {
+    display: block;
+}
+.img-song {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 1px;
+    
+}
+.song-des {
+    margin-left: 10px;
+    color: #FFFFFF;
+    
+}
+.song-des .song-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+.song-des .singer {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5E5E5E;
+}
+.time {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin-right: 400px;
+    color: #FFFFFF;
+}
+.heart {
+    margin: 0 30px 0 0;
+}
+.heart.active {
+    color: #1DB954;
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ play song +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+.tasbak {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    /* background-color: #3A2444; */
+    background-color: #181818;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.tasbak .tasbak-left {
+    color: #FFFFFF;
+    width: 100%;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+}
+.tasbak-img {
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/uchiage\ hanabi.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1px;
+    margin-right:  20px;
+
+}
+.tasbak-des .song-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+.tasbak-des .singer {
+    font-size: 14px;
+    font-weight: 500;
+    color: #574460;
+}
+/*--------------------*/
+.player-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+.dashboard {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.dashboard svg {
+    fill: #919191;
+}
+.play {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    
+}
+.play:hover {
+    transform: scale(1.1);
+}
+.play svg {
+    fill: #000000;
+
+}
+.play .icon-pause {
+    display: none;
+}
+.play.playing .icon-pause {
+    display: inline-block;
+}
+.play.playing .icon-play {
+    display: none;
+}
+.random.active .icon-random {
+    fill: #1DB954;
+}
+.repeat.active .icon-repeat {
+    fill: #1DB954;
+}
+
+.range-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5E5E5E;
+    font-size: 11px;
+}
+.range-bar .progress {
+    /* -webkit-appearance: none; */
+    /* appearance: inherit; */
+    width: 100%;
+    height: 5px;
+    /* background-color: #919191; */
+    border-radius: 5px;
+    margin: 0 10px;
+    outline: none;
+    overflow: hidden;
+}
+.range-bar .progress:hover {
+    overflow: visible;
+}
+
+
+.volume {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.icon-vol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5E5E5E;
+    font-size: 11px;
+}
+.icon-vol svg {
+    fill: #FFFFFF;
+}
+.volume .progress {
+    /* -webkit-appearance: none; */
+    width: 100%;
+    height: 5px;
+    /* background-color: #919191; */
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    margin: 0 0 0 15px;
+}
