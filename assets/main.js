@@ -39,16 +39,16 @@ const app = {
             order: 1,
             name: 'Suzume no Tojimari',
             singer: ' Nanoka Hara',
-            path: '../audio/suzume.mp3',
-            image: '../img/suzume.jpg',
+            path: './audio/suzume.mp3',
+            image: './img/suzume.jpg',
             time: '3:00'
         },
         {
             order: 2,
             name: 'Lemon',
             singer: 'Kenshi Yonezu',
-            path: '../audio/lemon.mp3',
-            image: '../img/lemon.jpg',
+            path: './audio/lemon.mp3',
+            image: './img/lemon.jpg',
             time: '3:08'
 
         },
@@ -56,8 +56,8 @@ const app = {
             order: 3,
             name: 'Nandemonaiya',
             singer: 'Radwimps',
-            path: '../audio/nandemonaiya.mp3',
-            image: '../img/Nandemonaiya.jpg',
+            path: './audio/nandemonaiya.mp3',
+            image: './img/Nandemonaiya.jpg',
             time: '3:02'
 
         },
@@ -65,8 +65,8 @@ const app = {
             order: 4,
             name: 'Uchiage Hanabi',
             singer: 'Daoko',
-            path: '../audio/Uchiage Hanabi.mp3',
-            image: '../img/uchiage hanabi.jpg',
+            path: './audio/Uchiage Hanabi.mp3',
+            image: './img/uchiage hanabi.jpg',
             time: '3:01'
 
         },
@@ -74,8 +74,8 @@ const app = {
             order: 5,
             name: 'Good Morning',
             singer: 'omori',
-            path: '../audio/omori.mp3',
-            image: '../img/omori.jpg',
+            path: './audio/omori.mp3',
+            image: './img/omori.jpg',
             time: '3:01'
 
         },
@@ -83,8 +83,8 @@ const app = {
             order: 6,
             name: 'Genkai Toppa x Survivor',
             singer: 'Kiyoshi Hikawa',
-            path: '../audio/Kiyoshi-Hikawa-Genkai-Toppa-Survivor.mp3',
-            image: '../img/goku.jpg',
+            path: './audio/Kiyoshi-Hikawa-Genkai-Toppa-Survivor.mp3',
+            image: './img/goku.jpg',
             time: '3:01'
 
         },
